@@ -1,0 +1,992 @@
+EESchema Schematic File Version 4
+LIBS:Feller380-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Feller380 Amp"
+Date "2019-08-18"
+Rev ""
+Comp "Feller Audio Designs"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L GuitarPedalStuff:Stereo_Audio_Jack AJ1
+U 1 1 5D599B76
+P 1450 2250
+F 0 "AJ1" H 1582 2617 50  0000 C CNN
+F 1 "Stereo_Audio_Jack" H 1582 2526 50  0000 C CNN
+F 2 "GuitarPedalStuff:Stereo_Audio_Jack" H 1500 1950 50  0001 C CNN
+F 3 "~" H 1500 2250 50  0001 C CNN
+	1    1450 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GuitarPedalStuff:Single_OpAmp U1
+U 1 1 5D5A2F71
+P 3200 2250
+F 0 "U1" H 3200 1896 45  0000 C CNN
+F 1 "Single_OpAmp" H 3200 1980 45  0000 C CNN
+F 2 "GuitarPedalStuff:DIP-8_Socket" H 3200 2600 20  0001 C CNN
+F 3 "" H 3200 2250 50  0001 C CNN
+	1    3200 2250
+	1    0    0    1   
+$EndComp
+$Comp
+L GuitarPedalStuff:Single_OpAmp U1
+U 2 1 5D5A4094
+P 2900 5250
+F 0 "U1" H 3028 5267 45  0000 L CNN
+F 1 "Single_OpAmp" H 2900 5000 45  0000 L CNN
+F 2 "GuitarPedalStuff:DIP-8_Socket" H 2900 5600 20  0001 C CNN
+F 3 "" H 2900 5250 50  0001 C CNN
+	2    2900 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GuitarPedalStuff:DC_Barrel_Jack PJ1
+U 1 1 5D5A5B2D
+P 1600 2800
+F 0 "PJ1" H 1657 3117 50  0000 C CNN
+F 1 "DC_Barrel_Jack" H 1657 3026 50  0000 C CNN
+F 2 "GuitarPedalStuff:DC_Barrel_Jack" H 1600 2500 50  0001 C CNN
+F 3 "~" H 1650 2760 50  0001 C CNN
+	1    1600 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2700 2050 2700
+Wire Wire Line
+	2050 2700 2050 2250
+Wire Wire Line
+	2050 2250 1900 2250
+Wire Wire Line
+	1900 2350 2150 2350
+Wire Wire Line
+	2150 2350 2150 2450
+$Comp
+L power:GND #PWR03
+U 1 1 5D5A9670
+P 2150 2450
+F 0 "#PWR03" H 2150 2200 50  0001 C CNN
+F 1 "GND" H 2155 2277 50  0000 C CNN
+F 2 "" H 2150 2450 50  0001 C CNN
+F 3 "" H 2150 2450 50  0001 C CNN
+	1    2150 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2900 2000 2900
+Wire Wire Line
+	2150 2900 2150 2850
+$Comp
+L Device:C C2
+U 1 1 5D5AC60A
+P 2150 2150
+F 0 "C2" V 1898 2150 50  0000 C CNN
+F 1 "47n" V 1989 2150 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 2188 2000 50  0001 C CNN
+F 3 "~" H 2150 2150 50  0001 C CNN
+	1    2150 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5D5AD060
+P 2400 2400
+F 0 "R3" H 2450 2500 50  0000 L CNN
+F 1 "1M5" H 2470 2355 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2330 2400 50  0001 C CNN
+F 3 "~" H 2400 2400 50  0001 C CNN
+	1    2400 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2150 2000 2150
+Wire Wire Line
+	2300 2150 2400 2150
+Wire Wire Line
+	2400 2250 2400 2150
+Connection ~ 2400 2150
+Wire Wire Line
+	2400 2150 2900 2150
+$Comp
+L Device:D D1
+U 1 1 5D5AE533
+P 3250 2600
+F 0 "D1" H 3250 2816 50  0000 C CNN
+F 1 "1N4148" H 3250 2725 50  0000 C CNN
+F 2 "GuitarPedalStuff:Diode_Socket" H 3250 2600 50  0001 C CNN
+F 3 "~" H 3250 2600 50  0001 C CNN
+	1    3250 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D2
+U 1 1 5D5AF189
+P 3250 2950
+F 0 "D2" H 3250 2734 50  0000 C CNN
+F 1 "1N4148" H 3250 2825 50  0000 C CNN
+F 2 "GuitarPedalStuff:Diode_Socket" H 3250 2950 50  0001 C CNN
+F 3 "~" H 3250 2950 50  0001 C CNN
+	1    3250 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 5D5AFFF0
+P 3250 3300
+F 0 "C6" V 2998 3300 50  0000 C CNN
+F 1 "470p" V 3089 3300 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 3288 3150 50  0001 C CNN
+F 3 "~" H 3250 3300 50  0001 C CNN
+	1    3250 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2900 2350 2850 2350
+Wire Wire Line
+	2850 2350 2850 2600
+Wire Wire Line
+	2850 2600 3100 2600
+Wire Wire Line
+	3400 2600 3600 2600
+Wire Wire Line
+	3600 2600 3600 2250
+Wire Wire Line
+	3600 2250 3500 2250
+Wire Wire Line
+	2850 2600 2850 2950
+Wire Wire Line
+	2850 2950 3100 2950
+Connection ~ 2850 2600
+Wire Wire Line
+	3400 2950 3600 2950
+Wire Wire Line
+	3600 2950 3600 2600
+Connection ~ 3600 2600
+Wire Wire Line
+	2850 2950 2850 3300
+Wire Wire Line
+	2850 3300 3100 3300
+Connection ~ 2850 2950
+Wire Wire Line
+	3400 3300 3600 3300
+Wire Wire Line
+	3600 3300 3600 2950
+Connection ~ 3600 2950
+$Comp
+L GuitarPedalStuff:Pot VR1
+U 1 1 5D5B1E16
+P 3600 3800
+F 0 "VR1" V 3487 3800 50  0000 C CNN
+F 1 "A250K" V 3396 3800 50  0000 C CNN
+F 2 "GuitarPedalStuff:Pot" H 3650 3250 50  0001 C CNN
+F 3 "~" H 3600 3800 50  0001 C CNN
+	1    3600 3800
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	3600 3500 3600 3450
+Connection ~ 3600 3300
+Wire Wire Line
+	3850 3800 3900 3800
+Wire Wire Line
+	3900 3800 3900 3450
+Wire Wire Line
+	3900 3450 3600 3450
+Connection ~ 3600 3450
+Wire Wire Line
+	3600 3450 3600 3300
+$Comp
+L Device:R R5
+U 1 1 5D5B5875
+P 3100 3800
+F 0 "R5" V 3200 3850 50  0000 L CNN
+F 1 "3K3" V 3000 3750 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3030 3800 50  0001 C CNN
+F 3 "~" H 3100 3800 50  0001 C CNN
+	1    3100 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3250 3800 3350 3800
+Wire Wire Line
+	2950 3800 2850 3800
+Wire Wire Line
+	2850 3800 2850 3300
+Connection ~ 2850 3300
+$Comp
+L Device:R R4
+U 1 1 5D5B68BF
+P 2600 3800
+F 0 "R4" V 2700 3850 50  0000 L CNN
+F 1 "3K3" V 2500 3750 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2530 3800 50  0001 C CNN
+F 3 "~" H 2600 3800 50  0001 C CNN
+	1    2600 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2450 3800 2350 3800
+$Comp
+L Device:C C3
+U 1 1 5D5B7B45
+P 2350 3450
+F 0 "C3" H 2235 3404 50  0000 R CNN
+F 1 "100n" H 2235 3495 50  0000 R CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 2388 3300 50  0001 C CNN
+F 3 "~" H 2350 3450 50  0001 C CNN
+	1    2350 3450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2350 3600 2350 3800
+Wire Wire Line
+	2350 3300 2350 3200
+Text Label 2350 3200 0    50   ~ 0
+Vref
+Wire Wire Line
+	2900 5000 2900 4950
+Wire Wire Line
+	2900 5550 2900 5600
+$Comp
+L power:GND #PWR06
+U 1 1 5D5BA4D5
+P 2900 5650
+F 0 "#PWR06" H 2900 5400 50  0001 C CNN
+F 1 "GND" H 2905 5477 50  0000 C CNN
+F 2 "" H 2900 5650 50  0001 C CNN
+F 3 "" H 2900 5650 50  0001 C CNN
+	1    2900 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 5D5BA997
+P 4300 2250
+F 0 "C7" V 4048 2250 50  0000 C CNN
+F 1 "1u" V 4139 2250 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4338 2100 50  0001 C CNN
+F 3 "~" H 4300 2250 50  0001 C CNN
+	1    4300 2250
+	0    1    1    0   
+$EndComp
+Connection ~ 3600 2250
+$Comp
+L Device:R R9
+U 1 1 5D5BB72B
+P 6400 2550
+F 0 "R9" V 6500 2600 50  0000 L CNN
+F 1 "33K" V 6300 2500 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6330 2550 50  0001 C CNN
+F 3 "~" H 6400 2550 50  0001 C CNN
+	1    6400 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6150 2550 6250 2550
+$Comp
+L GuitarPedalStuff:LM380N U2
+U 1 1 5D5BFBB1
+P 6950 2650
+F 0 "U2" H 7000 2350 50  0000 L CNN
+F 1 "LM380N" H 7000 2450 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7300 2200 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm380.pdf" H 6950 2650 50  0001 C CNN
+	1    6950 2650
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6550 2550 6650 2550
+Wire Wire Line
+	6650 2750 6550 2750
+Wire Wire Line
+	6550 2750 6550 2850
+$Comp
+L power:GND #PWR09
+U 1 1 5D5C2948
+P 6550 2850
+F 0 "#PWR09" H 6550 2600 50  0001 C CNN
+F 1 "GND" H 6555 2677 50  0000 C CNN
+F 2 "" H 6550 2850 50  0001 C CNN
+F 3 "" H 6550 2850 50  0001 C CNN
+	1    6550 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 5D5C2BAF
+P 6950 3200
+F 0 "C12" H 6835 3154 50  0000 R CNN
+F 1 "47n" H 6835 3245 50  0000 R CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 6988 3050 50  0001 C CNN
+F 3 "~" H 6950 3200 50  0001 C CNN
+	1    6950 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C13
+U 1 1 5D5C34B8
+P 7350 2900
+F 0 "C13" V 7450 2800 50  0000 C CNN
+F 1 "47n" V 7250 2800 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 7388 2750 50  0001 C CNN
+F 3 "~" H 7350 2900 50  0001 C CNN
+	1    7350 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3050 6950 2950
+$Comp
+L power:GND #PWR012
+U 1 1 5D5C5821
+P 6950 3550
+F 0 "#PWR012" H 6950 3300 50  0001 C CNN
+F 1 "GND" H 6955 3377 50  0000 C CNN
+F 2 "" H 6950 3550 50  0001 C CNN
+F 3 "" H 6950 3550 50  0001 C CNN
+	1    6950 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW1
+U 1 1 5D5C664F
+P 7350 3350
+F 0 "SW1" V 7500 3500 50  0000 C CNN
+F 1 "SW_SPST" V 7300 3600 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill0.8mm" H 7350 3350 50  0001 C CNN
+F 3 "~" H 7350 3350 50  0001 C CNN
+	1    7350 3350
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	6850 2350 6850 2250
+Wire Wire Line
+	6850 2250 6600 2250
+Wire Wire Line
+	6600 2250 6600 2300
+$Comp
+L power:GND #PWR010
+U 1 1 5D5CB11B
+P 6600 2300
+F 0 "#PWR010" H 6600 2050 50  0001 C CNN
+F 1 "GND" H 6605 2127 50  0000 C CNN
+F 2 "" H 6600 2300 50  0001 C CNN
+F 3 "" H 6600 2300 50  0001 C CNN
+	1    6600 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 2350 6950 2250
+Wire Wire Line
+	6950 2250 6850 2250
+Connection ~ 6850 2250
+Wire Wire Line
+	6850 2950 6850 3050
+Wire Wire Line
+	6850 3050 6700 3050
+Wire Wire Line
+	6700 3050 6700 3150
+$Comp
+L Device:R R10
+U 1 1 5D5CE3A8
+P 7850 2950
+F 0 "R10" H 7950 3050 50  0000 L CNN
+F 1 "10R" H 7950 2950 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7780 2950 50  0001 C CNN
+F 3 "~" H 7850 2950 50  0001 C CNN
+	1    7850 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C14
+U 1 1 5D5D1821
+P 7850 3350
+F 0 "C14" H 7950 3450 50  0000 C CNN
+F 1 "47n" H 8000 3250 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 7888 3200 50  0001 C CNN
+F 3 "~" H 7850 3350 50  0001 C CNN
+	1    7850 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 2650 7850 2800
+Wire Wire Line
+	7850 3100 7850 3200
+Wire Wire Line
+	7850 3500 7850 3600
+$Comp
+L power:GND #PWR013
+U 1 1 5D5D504D
+P 7850 3600
+F 0 "#PWR013" H 7850 3350 50  0001 C CNN
+F 1 "GND" H 7855 3427 50  0000 C CNN
+F 2 "" H 7850 3600 50  0001 C CNN
+F 3 "" H 7850 3600 50  0001 C CNN
+	1    7850 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GuitarPedalStuff:Pot VR4
+U 1 1 5D5D54F8
+P 8800 2650
+F 0 "VR4" H 8732 2696 50  0000 R CNN
+F 1 "A1K" H 8732 2605 50  0000 R CNN
+F 2 "GuitarPedalStuff:Pot" H 8850 2100 50  0001 C CNN
+F 3 "~" H 8800 2650 50  0001 C CNN
+	1    8800 2650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5D5D855E
+P 8800 3150
+F 0 "R11" H 8900 3250 50  0000 L CNN
+F 1 "8R" H 8900 3150 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8730 3150 50  0001 C CNN
+F 3 "~" H 8800 3150 50  0001 C CNN
+F 4 "1W" H 8950 3050 50  0000 C CNN "Power"
+	1    8800 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 3000 8800 2950
+$Comp
+L power:GND #PWR014
+U 1 1 5D5D9A9F
+P 8800 3400
+F 0 "#PWR014" H 8800 3150 50  0001 C CNN
+F 1 "GND" H 8805 3227 50  0000 C CNN
+F 2 "" H 8800 3400 50  0001 C CNN
+F 3 "" H 8800 3400 50  0001 C CNN
+	1    8800 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 3400 8800 3300
+$Comp
+L Device:R R12
+U 1 1 5D5DB0E6
+P 9100 2650
+F 0 "R12" H 9200 2750 50  0000 L CNN
+F 1 "1K" H 9200 2650 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9030 2650 50  0001 C CNN
+F 3 "~" H 9100 2650 50  0001 C CNN
+	1    9100 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 2950 9100 2950
+Wire Wire Line
+	9100 2950 9100 2800
+Connection ~ 8800 2950
+Wire Wire Line
+	8800 2950 8800 2900
+Wire Wire Line
+	9100 2500 9100 2350
+Wire Wire Line
+	9100 2350 8800 2350
+Wire Wire Line
+	8800 2350 8800 2400
+$Comp
+L Device:C C15
+U 1 1 5D5E1E58
+P 8250 2650
+F 0 "C15" V 8150 2550 50  0000 C CNN
+F 1 "220u" V 8150 2800 50  0000 C CNN
+F 2 "Capacitor_THT:C_Radial_D5.0mm_H5.0mm_P2.00mm" H 8288 2500 50  0001 C CNN
+F 3 "~" H 8250 2650 50  0001 C CNN
+	1    8250 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7850 2650 8100 2650
+Wire Wire Line
+	8400 2650 8500 2650
+$Comp
+L Device:Speaker SPK1
+U 1 1 5D5E76D0
+P 9750 2350
+F 0 "SPK1" H 9920 2346 50  0000 L CNN
+F 1 "8R" H 9920 2255 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill0.8mm" H 9750 2150 50  0001 C CNN
+F 3 "~" H 9740 2300 50  0001 C CNN
+	1    9750 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 2350 9550 2350
+Connection ~ 9100 2350
+Wire Wire Line
+	9550 2450 9450 2450
+Wire Wire Line
+	9450 2450 9450 2550
+$Comp
+L power:GND #PWR015
+U 1 1 5D5EAD2C
+P 9450 2550
+F 0 "#PWR015" H 9450 2300 50  0001 C CNN
+F 1 "GND" H 9455 2377 50  0000 C CNN
+F 2 "" H 9450 2550 50  0001 C CNN
+F 3 "" H 9450 2550 50  0001 C CNN
+	1    9450 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5D5EB092
+P 1350 5300
+F 0 "C1" H 1235 5254 50  0000 R CNN
+F 1 "470u" H 1235 5345 50  0000 R CNN
+F 2 "Capacitor_THT:C_Radial_D5.0mm_H5.0mm_P2.00mm" H 1388 5150 50  0001 C CNN
+F 3 "~" H 1350 5300 50  0001 C CNN
+	1    1350 5300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5D5EC04B
+P 1850 5100
+F 0 "R1" H 1900 5200 50  0000 L CNN
+F 1 "33K" H 1900 5050 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1780 5100 50  0001 C CNN
+F 3 "~" H 1850 5100 50  0001 C CNN
+	1    1850 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5D5ECF78
+P 1850 5500
+F 0 "R2" H 1900 5600 50  0000 L CNN
+F 1 "33K" H 1900 5450 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1780 5500 50  0001 C CNN
+F 3 "~" H 1850 5500 50  0001 C CNN
+	1    1850 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 5150 1350 4900
+Wire Wire Line
+	1350 4900 1850 4900
+Wire Wire Line
+	1850 4900 1850 4950
+Wire Wire Line
+	1350 5450 1350 5700
+Wire Wire Line
+	1350 5700 1850 5700
+Wire Wire Line
+	1850 5700 1850 5650
+Wire Wire Line
+	1850 5350 1850 5300
+$Comp
+L Device:C C4
+U 1 1 5D5F2041
+P 2200 5500
+F 0 "C4" H 2085 5454 50  0000 R CNN
+F 1 "47u" H 2085 5545 50  0000 R CNN
+F 2 "Capacitor_THT:C_Radial_D5.0mm_H5.0mm_P2.00mm" H 2238 5350 50  0001 C CNN
+F 3 "~" H 2200 5500 50  0001 C CNN
+	1    2200 5500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1850 5300 2200 5300
+Wire Wire Line
+	2200 5300 2200 5350
+Connection ~ 1850 5300
+Wire Wire Line
+	1850 5300 1850 5250
+Wire Wire Line
+	1850 5700 2200 5700
+Wire Wire Line
+	2200 5700 2200 5650
+Connection ~ 1850 5700
+$Comp
+L power:GND #PWR02
+U 1 1 5D5F5EBA
+P 1850 5800
+F 0 "#PWR02" H 1850 5550 50  0001 C CNN
+F 1 "GND" H 1855 5627 50  0000 C CNN
+F 2 "" H 1850 5800 50  0001 C CNN
+F 3 "" H 1850 5800 50  0001 C CNN
+	1    1850 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 5700 1850 5800
+Text Label 2200 5300 0    50   ~ 0
+Vref
+$Comp
+L power:VDD #PWR01
+U 1 1 5D5FD594
+P 1350 4900
+F 0 "#PWR01" H 1350 4750 50  0001 C CNN
+F 1 "VDD" H 1367 5073 50  0000 C CNN
+F 2 "" H 1350 4900 50  0001 C CNN
+F 3 "" H 1350 4900 50  0001 C CNN
+	1    1350 4900
+	1    0    0    -1  
+$EndComp
+Connection ~ 1350 4900
+$Comp
+L power:VDD #PWR05
+U 1 1 5D5FDD79
+P 2900 4900
+F 0 "#PWR05" H 2900 4750 50  0001 C CNN
+F 1 "VDD" H 2917 5073 50  0000 C CNN
+F 2 "" H 2900 4900 50  0001 C CNN
+F 3 "" H 2900 4900 50  0001 C CNN
+	1    2900 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR011
+U 1 1 5D5FE0A4
+P 6700 3150
+F 0 "#PWR011" H 6700 3000 50  0001 C CNN
+F 1 "VDD" H 6718 3323 50  0000 C CNN
+F 2 "" H 6700 3150 50  0001 C CNN
+F 3 "" H 6700 3150 50  0001 C CNN
+	1    6700 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VDD #PWR04
+U 1 1 5D5FF710
+P 2150 2850
+F 0 "#PWR04" H 2150 2700 50  0001 C CNN
+F 1 "VDD" H 2200 3000 50  0000 C CNN
+F 2 "" H 2150 2850 50  0001 C CNN
+F 3 "" H 2150 2850 50  0001 C CNN
+	1    2150 2850
+	1    0    0    -1  
+$EndComp
+Wire Notes Line style solid
+	1250 4650 1250 6050
+Wire Notes Line style solid
+	1250 6050 3400 6050
+Wire Notes Line style solid
+	3400 6050 3400 4650
+Wire Notes Line style solid
+	3400 4650 1250 4650
+Text Notes 1300 4600 0    50   ~ 0
+Power Supply
+$Comp
+L Device:D D3
+U 1 1 5D61BD97
+P 3800 2550
+F 0 "D3" V 3754 2629 50  0000 L CNN
+F 1 "1N4148" V 3900 2400 50  0000 L CNN
+F 2 "GuitarPedalStuff:Diode_Socket" H 3800 2550 50  0001 C CNN
+F 3 "~" H 3800 2550 50  0001 C CNN
+	1    3800 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D4
+U 1 1 5D61CCC5
+P 4050 2550
+F 0 "D4" V 4096 2471 50  0000 R CNN
+F 1 "1N4148" V 4005 2471 50  0000 R CNN
+F 2 "GuitarPedalStuff:Diode_Socket" H 4050 2550 50  0001 C CNN
+F 3 "~" H 4050 2550 50  0001 C CNN
+	1    4050 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3800 2400 3800 2350
+Wire Wire Line
+	3800 2350 3900 2350
+Wire Wire Line
+	4050 2350 4050 2400
+Wire Wire Line
+	3800 2700 3800 2750
+Wire Wire Line
+	3800 2750 3900 2750
+Wire Wire Line
+	4050 2750 4050 2700
+Connection ~ 3900 2350
+Wire Wire Line
+	3900 2350 4050 2350
+Wire Wire Line
+	3900 2750 3900 2800
+Connection ~ 3900 2750
+Wire Wire Line
+	3900 2750 4050 2750
+Wire Wire Line
+	2400 2550 2400 2650
+Text Label 2400 2650 0    50   ~ 0
+Vref
+$Comp
+L power:GND #PWR07
+U 1 1 5D628BB3
+P 3900 2800
+F 0 "#PWR07" H 3900 2550 50  0001 C CNN
+F 1 "GND" H 3905 2627 50  0000 C CNN
+F 2 "" H 3900 2800 50  0001 C CNN
+F 3 "" H 3900 2800 50  0001 C CNN
+	1    3900 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2800 2000 2800
+Wire Wire Line
+	2000 2800 2000 2900
+Connection ~ 2000 2900
+Wire Wire Line
+	2000 2900 2150 2900
+Text Notes 3700 3900 0    50   ~ 0
+Drive\n
+Text Notes 8450 2450 0    50   ~ 0
+Volume
+Text Notes 7450 3450 0    50   ~ 0
+Bright\nSwitch
+Wire Wire Line
+	3600 2250 3900 2250
+Wire Wire Line
+	3900 2250 3900 2350
+Connection ~ 3900 2250
+Wire Wire Line
+	3900 2250 4150 2250
+$Comp
+L Device:C C5
+U 1 1 5D6816BD
+P 2650 5300
+F 0 "C5" H 2800 5200 50  0000 R CNN
+F 1 "100n" H 2650 5500 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 2688 5150 50  0001 C CNN
+F 3 "~" H 2650 5300 50  0001 C CNN
+	1    2650 5300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2650 5150 2650 4950
+Wire Wire Line
+	2650 4950 2900 4950
+Connection ~ 2900 4950
+Wire Wire Line
+	2900 4950 2900 4900
+Wire Wire Line
+	2650 5450 2650 5600
+Wire Wire Line
+	2650 5600 2900 5600
+Connection ~ 2900 5600
+Wire Wire Line
+	2900 5600 2900 5650
+$Comp
+L GuitarPedalStuff:Single_OpAmp U1
+U 3 1 5D69EFA5
+P 4050 5900
+F 0 "U1" H 3767 6220 45  0000 C CNN
+F 1 "Single_OpAmp" H 3767 6136 45  0000 C CNN
+F 2 "GuitarPedalStuff:DIP-8_Socket" H 4050 6250 20  0001 C CNN
+F 3 "" H 4050 5900 50  0001 C CNN
+	3    4050 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5D602A36
+P 4700 2250
+F 0 "R6" V 4800 2250 50  0000 L CNN
+F 1 "10K" V 4600 2200 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4630 2250 50  0001 C CNN
+F 3 "~" H 4700 2250 50  0001 C CNN
+	1    4700 2250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4450 2250 4550 2250
+$Comp
+L Device:R R7
+U 1 1 5D606D89
+P 4950 2500
+F 0 "R7" H 4800 2550 50  0000 L CNN
+F 1 "10K" H 4750 2450 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4880 2500 50  0001 C CNN
+F 3 "~" H 4950 2500 50  0001 C CNN
+	1    4950 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5D606FEF
+P 4950 3450
+F 0 "R8" H 4800 3500 50  0000 L CNN
+F 1 "10K" H 4750 3400 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4880 3450 50  0001 C CNN
+F 3 "~" H 4950 3450 50  0001 C CNN
+	1    4950 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 5D60775E
+P 4950 3050
+F 0 "C8" H 5100 3000 50  0000 C CNN
+F 1 "100n" H 5100 3100 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4988 2900 50  0001 C CNN
+F 3 "~" H 4950 3050 50  0001 C CNN
+	1    4950 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 5D607C25
+P 5200 2250
+F 0 "C9" V 4948 2250 50  0000 C CNN
+F 1 "470p" V 5039 2250 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 5238 2100 50  0001 C CNN
+F 3 "~" H 5200 2250 50  0001 C CNN
+	1    5200 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C10
+U 1 1 5D607FA1
+P 5200 2850
+F 0 "C10" V 4948 2850 50  0000 C CNN
+F 1 "100n" V 5050 2850 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 5238 2700 50  0001 C CNN
+F 3 "~" H 5200 2850 50  0001 C CNN
+	1    5200 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L GuitarPedalStuff:Pot VR2
+U 1 1 5D608481
+P 5450 2550
+F 0 "VR2" H 5600 2450 50  0000 C CNN
+F 1 "A100K" H 5600 2700 50  0000 C CNN
+F 2 "GuitarPedalStuff:Pot" H 5500 2000 50  0001 C CNN
+F 3 "~" H 5450 2550 50  0001 C CNN
+	1    5450 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GuitarPedalStuff:Pot VR3
+U 1 1 5D60AF23
+P 5450 3250
+F 0 "VR3" H 5350 3450 50  0000 C CNN
+F 1 "A1M" H 5250 3350 50  0000 C CNN
+F 2 "GuitarPedalStuff:Pot" H 5500 2700 50  0001 C CNN
+F 3 "~" H 5450 3250 50  0001 C CNN
+	1    5450 3250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2250 4950 2250
+Wire Wire Line
+	4950 2250 4950 2350
+Connection ~ 4950 2250
+Wire Wire Line
+	4950 2250 5050 2250
+Wire Wire Line
+	4950 3250 5150 3250
+Wire Wire Line
+	4950 3250 4950 3300
+Wire Wire Line
+	4950 3650 5200 3650
+Wire Wire Line
+	5350 2250 5450 2250
+Wire Wire Line
+	5450 2250 5450 2300
+$Comp
+L power:GND #PWR08
+U 1 1 5D63B5B0
+P 5200 3750
+F 0 "#PWR08" H 5200 3500 50  0001 C CNN
+F 1 "GND" H 5205 3577 50  0000 C CNN
+F 2 "" H 5200 3750 50  0001 C CNN
+F 3 "" H 5200 3750 50  0001 C CNN
+	1    5200 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3750 5200 3650
+Connection ~ 5200 3650
+Wire Wire Line
+	5200 3650 5450 3650
+$Comp
+L Device:C C11
+U 1 1 5D6593C2
+P 6000 2550
+F 0 "C11" V 5748 2550 50  0000 C CNN
+F 1 "1u" V 5839 2550 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 6038 2400 50  0001 C CNN
+F 3 "~" H 6000 2550 50  0001 C CNN
+	1    6000 2550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5750 2550 5850 2550
+Wire Wire Line
+	4950 2850 5050 2850
+Wire Wire Line
+	4950 2850 4950 2900
+Wire Wire Line
+	5350 2850 5450 2850
+Wire Wire Line
+	5450 2850 5450 3000
+Wire Wire Line
+	4950 3200 4950 3250
+Connection ~ 4950 3250
+Wire Wire Line
+	4950 2650 4950 2850
+Connection ~ 4950 2850
+Wire Wire Line
+	5450 2800 5450 2850
+Connection ~ 5450 2850
+Wire Wire Line
+	4950 3600 4950 3650
+Wire Wire Line
+	5450 3500 5450 3650
+Text Notes 5500 2300 0    50   ~ 0
+Treble
+Text Notes 5500 2950 0    50   ~ 0
+Bass
+Wire Notes Line style solid
+	5800 1900 5800 4050
+Wire Notes Line style solid
+	5800 4050 4500 4050
+Wire Notes Line style solid
+	4500 4050 4500 1900
+Wire Notes Line style solid
+	4500 1900 5800 1900
+Text Notes 4550 1850 0    50   ~ 0
+Tone Stack
+Wire Wire Line
+	2750 3800 2850 3800
+Connection ~ 2850 3800
+Wire Wire Line
+	7250 2650 7350 2650
+Wire Wire Line
+	7350 2750 7350 2650
+Wire Wire Line
+	7350 3050 7350 3150
+Wire Wire Line
+	6950 3350 6950 3550
+$Comp
+L power:GND #PWR0101
+U 1 1 5D75680E
+P 7350 3650
+F 0 "#PWR0101" H 7350 3400 50  0001 C CNN
+F 1 "GND" H 7355 3477 50  0000 C CNN
+F 2 "" H 7350 3650 50  0001 C CNN
+F 3 "" H 7350 3650 50  0001 C CNN
+	1    7350 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 3550 7350 3650
+Wire Wire Line
+	7350 2650 7850 2650
+Connection ~ 7350 2650
+Connection ~ 7850 2650
+$EndSCHEMATC
